@@ -1,0 +1,47 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+    char s[50]="hello world";
+    cout<<strlen(s)<<endl;        //the space is counted in the length of the string
+}
+char s1[20]="good ";
+    char s2[10]="morning";
+    cout<<strcat(s1,s2)<<endl; //s1 is the destination jismei humein morning ko jodna hai and the source is s2 i.e good i.e,strncat(s1,s2); matlab contents of s2 are copied in s1
+char s1[20]="programming";
+    char s2[10]="gram";
+    cout<<strstr(s1,s2)<<endl; //if s2 is present in s1,then the output printed is gramming,it prints the rest of the string starting from the word gram or s2
+    if i make s2="k",then the output is null because the word k is not present in s1.
+char s1[200];
+    char s2[100];
+    cout<<"enter the first string"<<endl;
+    cin>>s1;
+    cout<<"enter the second string"<<endl;
+    cin>>s2;
+    if(strstr(s1,s2)!=NULL){
+        cout<<strstr(s1,s2);
+    }
+    else{
+        cout<<"bakchodi mat kar laude";
+    }
+}
+char s1[100]="programming";
+    cout<<strchr(s1,'g')<<endl;//we use this function to search a character from the left and not a string in the main string and then the output is the string printed after the character including the character.
+    if we use strrchr(s1,'g'),then the function searches from the right side of the string and then output is g, if 'r',ramming is printed and not rogramming.
+char s1[10]="hello";
+    char s2[10]="hello";
+    cout<<strcmp(s1,s2)<<endl;//the output is 0 as s1 is the same as s2.
+char s1[10]="hello";
+    char s2[10]="Hello";
+    cout<<strcmp(s1,s2)<<endl;//the output is positive as s1 comes firster than s2,i.e,h has higher ascii value than H.
+char s1[10]="Hello";
+    char s2[10]="hello";
+    cout<<strcmp(s1,s2)<<endl;//the output is negative as s2 comes first as now we got h in the second string.
+char s1[10]="minor";
+    char s2[10]="elder";
+    cout<<strcmp(s1,s2)<<endl;//the output is positive as m comes after e,i.e,m has higher ascii value than e.
+char s1[20]="235";
+    char s2[20]="54.78";
+    long int x=strtol(s1,NULL,10);//this function converts the string to long int,we need to add NULL and 10(integer),8(octal),6(hexadecimal).(str to long is the function)
+    float y=strtof(s2,NULL);//this function converts the string to float,we need to add only NULL here.(str to float). 
+    cout<<x<<","<<y<<endl;
