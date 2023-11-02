@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    string str="today";
+    string::iterator it;                           //necessary to use this datatype.
+    for(it=str.begin();it<=str.end();it++){        //the begin and end signifies the beginning and end of the string.
+        cout<<*it<<endl;                           //we use *it as it is basically a pointer.
+    }
+    for(it=str.begin();it<str.end();it++){         //to make today as TODAY.
+        *it=*it-32;
+    }
+    for(it=str.begin();it<str.end();it++){
+        cout<<*it<<endl;
+    }
+}
+int main(){
+    string str="today";
+    string::reverse_iterator it;                 //function to print the reverse of the string.
+    for(it=str.rbegin();it<str.rend();it++){     //we use rbegin and rend instead of begin and end.
+        cout<<*it;
+    }
+}
+int main(){
+    string str="today";
+    for(int i=0;i<str.length();i++){
+        cout<<str[i];
+    }
+}
