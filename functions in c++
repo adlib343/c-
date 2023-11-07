@@ -1,0 +1,52 @@
+this is swapping by passing value:
+#include<iostream>
+using namespace std;
+void swap(int a,int b){
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    cout<<"a:"<<a<<","<<"b:"<<b;
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:"<<endl;
+    cin>>a>>b;
+    swap(a,b);
+    return 0;
+}
+this is swapping by passing reference:
+#include<iostream>
+using namespace std;
+void swap(int &a,int &b){               //this is the only difference
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    cout<<"a:"<<a<<","<<"b:"<<b;
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:"<<endl;
+    cin>>a>>b;
+    swap(a,b);
+    return 0;
+}
+this is swapping by passing address:
+#include<iostream>
+using namespace std;
+void swap(int *a,int *b){           //we use pointers here
+    int temp;
+    temp=*a;
+    *a=*b;
+    *b=temp;
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:"<<endl;
+    cin>>a>>b;
+    swap(&a,&b);                     //we use address of the 2 variables here
+    cout<<a<<","<<b;
+    return 0;
+}
+
